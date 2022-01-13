@@ -1,6 +1,5 @@
 function main() {
   // scene camera renderer - 3 must!
-
   const canvas = document.querySelector("#c");
 
   const fov = 50;
@@ -13,19 +12,23 @@ function main() {
   //   camera.position.z = 1;
 
   const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
+
+  const renderer = new THREE.WebGLRenderer({ canvas });
+
   const width = canvas.clientWidth;
   const height = canvas.clientHeight;
 
-  render.setSize(width, height);
+  renderer.setSize(width, height);
 
   const scene = new THREE.Scene();
   const loader = new THREE.TextureLoader();
   const texture = loader.load(
     "https://threejs.org/manual/examples/resources/images/equirectangularmaps/tears_of_steel_bridge_2k.jpg",
     () => {
-      const rt = new THREE.WebGLCubeRenderTarget(texture.image.height);
-      rt.fromEquirectangularTexture(rendere, texture);
-      scene.background = rt.texture;
+      //   const rt = new THREE.WebGLCubeRenderTarget(texture.image.height);
+      //   rt.fromEquirectangularTexture(rendere, texture);
+      //   scene.background = rt.texture;
+      scene.background = texture;
     }
   );
 
@@ -33,4 +36,7 @@ function main() {
     renderer.render(scene, camera);
     requestAnimationFrame(render);
   }
+  requestAnimationFrame(render);
 }
+
+main();
