@@ -33,8 +33,7 @@ function main() {
     camera.aspect = width / height;
     camera.updateProjectionMatrix();
 
-    renderer.setSize(width, height);
-
+    renderer.setSize(width, height, false);
     renderer.render(scene, camera);
     requestAnimationFrame(render);
   }
