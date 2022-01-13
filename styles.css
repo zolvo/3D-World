@@ -8,3 +8,9 @@ body {
   height: 100%;
   display: inline-block;
 }
+
+@media screen and (min-width: 768px) and (orientation: portrait) {
+  #c {
+    height: 100vh;
+  }
+}
