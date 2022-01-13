@@ -9,6 +9,13 @@ body {
   display: inline-block;
 }
 
+.tilt-text {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 75px;
+  color: darkolivegreen;
+  text-shadow: 1px 1px 4px orange;
+}
+
 @media screen and (min-width: 500px) and (orientation: portrait) {
   #c {
     height: 100%;
