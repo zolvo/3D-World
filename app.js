@@ -1,3 +1,6 @@
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+
 function main() {
   // scene camera renderer - 3 must!
   const canvas = document.querySelector("#c");
