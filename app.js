@@ -19,7 +19,7 @@ function main() {
   const loader = new THREE.TextureLoader();
   const texture = loader.load(
     //"https://threejs.org/manual/examples/resources/images/equirectangularmaps/tears_of_steel_bridge_2k.jpg",
-    "https://github.com/zolvo/3D-World/blob/master/purple-office.jpeg",
+    "https://oc-demo-site.squarespace.com/s/purple-office.jpeg",
     () => {
       const rt = new THREE.WebGLCubeRenderTarget(texture.image.height);
       rt.fromEquirectangularTexture(renderer, texture);
